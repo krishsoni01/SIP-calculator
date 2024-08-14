@@ -193,7 +193,7 @@ body {
 @media only screen and (max-width: 768px) {
     body {
         /* justify-content: flex-start; */
-        padding-top: 20px; 
+        padding: 15px 0px; 
         align-items: flex-start;
     }
 
@@ -230,12 +230,11 @@ body {
     }
 
     .graph_logo {
-        flex-direction: column;
-        padding: 10px 0;
+        padding: 5px 0;
     }
 
     .graph_logo .left_logo, .graph_logo .right_logo {
-        margin-bottom: 10px;
+        margin-bottom: 7px;
     }
 
     .right .amount_div, .intrest_div, .total_div {
@@ -245,6 +244,10 @@ body {
 
     .right h4, .right span {
         font-size: 18px;
+    }
+    
+    .right span {
+        font-size: 16px;
     }
 
     .right {
