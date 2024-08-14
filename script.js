@@ -39,8 +39,23 @@ submit_btn.addEventListener("click",()=>{
         return;
     }
     else{
-        document.querySelector(".right").style.opacity = 1;
-        document.querySelector(".main").style.width = "90%";
+        // document.querySelector(".right").style.opacity = 1;
+        // document.querySelector(".main").style.width = "90%";
+
+            const rightDiv = document.querySelector(".right");
+            const mainDiv = document.querySelector(".main");
+    
+            // Show the right div and expand the main div
+            rightDiv.style.opacity = 1;
+            rightDiv.classList.add('visible'); // Apply the visible class for smooth transition
+            mainDiv.style.width = "90%";
+            mainDiv.style.height = "auto"; // Adjust the main div height
+    
+            if (window.innerWidth <= 768) {
+                // Specific behavior for screens <= 768px
+                rightDiv.style.maxHeight = "1000px"; // Large enough to show the content
+            }
+    
     }
 })
 
