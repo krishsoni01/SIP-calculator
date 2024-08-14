@@ -1,0 +1,244 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    transition: all ease 0.2s;
+}
+
+html,
+body {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: "Montserrat", sans-serif;
+}
+
+.main {
+    height: 80%;
+    width: 40%;
+    border: 2px solid black;
+    border-radius: 3px;
+    padding: 5px 10px;
+    position: relative;
+    transition: linear 0.3s;
+}
+
+.nav {
+    border: 1.5px solid black;
+    position: absolute;
+    top: 40px;
+    left: 0px;
+    width: 100%;
+    margin: 0px;
+}
+
+.heading {
+    font-size: 25px;
+    margin-bottom: 20px;
+}
+
+.radio_btn {
+    font-size: 18px;
+    user-select: none;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.radio_btn input {
+    margin: 0px 10px;
+}
+
+.mainBox {
+    width: 100%;
+    height: 100%;
+    display: flex;
+}
+
+.left,
+.right {
+    width: 50%;
+    height: 80%;
+    margin-top: 25px;
+}
+
+.left h4 {
+    font-size: 20px;
+    margin: 16px 0px;
+}
+
+.left input {
+    width: 500px;
+    font-size: 18px;
+    padding: 5px 10px;
+    outline: none;
+    border: 1px solid rgb(0, 0, 0);
+    border-radius: 3px;
+    display: block;
+}
+
+.left #submitBtn {
+    margin-top: 30px;
+    margin-left: 150px;
+    width: 200px;
+    font-size: 24px;
+    font-weight: bold;
+    ;
+    border-radius: 20px;
+    color: white;
+    background-color: rgb(94, 51, 134);
+    border: none;
+    cursor: pointer;
+    font-family: "Montserrat", sans-serif;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+.left #submitBtn:hover {
+    background-color: rgb(108, 67, 146);
+}
+
+.right {
+    padding-top: 16px;
+    opacity: 0;
+    transition: linear 0.3s;
+}
+
+.right .amount_div,
+.intrest_div,
+.total_div {
+    display: flex;
+    justify-content: space-between;
+    padding: 5px 10px;
+    margin: 5px 0px;
+}
+
+.right h4 {
+    display: inline;
+    font-size: 20px;
+}
+
+.right span {
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.graph {
+    padding: 5px 10px;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.graph h4 {
+    font-size: 16px;
+}
+
+.graph_div {
+    height: 35px;
+    width: 400px;
+    border-radius: 3px;
+    display: flex;
+    overflow: hidden;
+    margin: 10px auto;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+
+}
+
+.graph_div .amt_invested {
+    width: 50%;
+    background-color: #a6a7a8;
+    transition: linear 0.3s;
+}
+
+.graph_div .return_recieved {
+    width: 50%;
+    background-color: green;
+    transition: linear 0.3s;
+}
+
+.graph_logo {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 5px 25px;
+}
+
+.graph_logo .left_logo span,
+.right_logo span {
+    font-size: 15px;
+}
+
+.graph_logo .left_logo #color1 {
+    height: 15px;
+    width: 15px;
+    border-radius: 50%;
+    background-color: #a6a7a8;
+    margin: 0px 5px;
+    display: inline-block;
+    transform: translateY(3px);
+}
+
+.graph_logo .right_logo #color2 {
+    height: 15px;
+    width: 15px;
+    border-radius: 50%;
+    background-color: green;
+    margin: 0px 5px;
+    display: inline-block;
+    transform: translateY(3px);
+}
+
+@media only screen and (max-width: 768px) {
+    .main {
+        width: 90%;
+        height: auto;
+    }
+
+    .mainBox {
+        flex-direction: column;
+    }
+
+    .left,
+    .right {
+        width: 100%;
+        margin-top: 20px;
+    }
+
+    .left input {
+        width: 100%;
+    }
+
+    .left #submitBtn {
+        margin-top: 20px;
+        margin-left: 0;
+        width: 100%;
+    }
+
+    .graph_div {
+        width: 100%;
+    }
+
+    .graph_logo {
+        flex-direction: column;
+        padding: 10px 0;
+    }
+
+    .graph_logo .left_logo,
+    .graph_logo .right_logo {
+        margin-bottom: 10px;
+    }
+
+    .right .amount_div,
+    .intrest_div,
+    .total_div {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .right h4,
+    .right span {
+        font-size: 18px;
+    }
+ } 

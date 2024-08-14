@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SIP Calculator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+   
+    <div class="main">
+        <div class="nav"></div>
+        <h1 class="heading">SIP Calculator</h1>
+        <div class="radio_btn">
+            <input type="radio" name="radioBtn" id="SIP" checked>
+            <label for="SIP">Sip</label>
+            <input type="radio" name="radioBtn" id="Lumpsump">
+            <label for="Lumpsump">Lumpsump</label>
+        </div>
+
+        <div class="mainBox">
+        <div class="left">
+            <h4 id="investment_type">Monthly Investment : </h4>
+            <input type="number" placeholder="5000₹" id="amount" required>
+            <h4>Expected Return Rate : </h4>
+            <input type="number"  placeholder="12%" id="return" required>
+            <h4>Time Period : </h4>
+            <input type="number" placeholder="10 Years" id="time_period" required>
+            
+            <input type="submit" id="submitBtn">
+        </div>
+        <div class="right">
+
+            <div class="graph">
+                <h4>Investment Graph</h4>
+                <div class="graph_div">
+                    <div class="amt_invested"></div>
+                    <div class="return_recieved"></div>
+                </div>
+                <div class="graph_logo">
+                    <div class="left_logo"><div id="color1"></div><span>Amount Invested</span></div>
+                    <div class="right_logo"><div id="color2"></div><span>Profit Earned</span></div>
+                </div>
+                
+            </div>
+
+            <div class="amount_div">
+                <h4>Amount Invested : </h4>
+                <span id="amount_invested"></span>
+            </div>
+            <div class="intrest_div">
+                <h4>Expected Returns : </h4>
+                <span id="intrest"></span>
+            </div>
+            <div class="total_div">
+                <h4>Total Returns : </h4>
+                <span id="total"></span>
+            </div>
+            
+
+        </div>
+        </div>
+
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
