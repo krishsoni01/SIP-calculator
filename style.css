@@ -86,7 +86,6 @@ body {
     width: 200px;
     font-size: 24px;
     font-weight: bold;
-    ;
     border-radius: 20px;
     color: white;
     background-color: rgb(94, 51, 134);
@@ -190,18 +189,25 @@ body {
     transform: translateY(3px);
 }
 
+
 @media only screen and (max-width: 768px) {
+    body {
+        /* justify-content: flex-start; */
+        padding-top: 20px; 
+        align-items: flex-start;
+    }
+
     .main {
         width: 90%;
-        height: auto;
+        height: auto; 
+        transition: height 0.3s ease; 
     }
 
     .mainBox {
         flex-direction: column;
     }
 
-    .left,
-    .right {
+    .left, .right {
         width: 100%;
         margin-top: 20px;
     }
@@ -215,6 +221,9 @@ body {
         margin-left: 0;
         width: 100%;
     }
+    .graph{
+        margin-bottom: 10px;
+    }
 
     .graph_div {
         width: 100%;
@@ -225,20 +234,28 @@ body {
         padding: 10px 0;
     }
 
-    .graph_logo .left_logo,
-    .graph_logo .right_logo {
+    .graph_logo .left_logo, .graph_logo .right_logo {
         margin-bottom: 10px;
     }
 
-    .right .amount_div,
-    .intrest_div,
-    .total_div {
-        flex-direction: column;
+    .right .amount_div, .intrest_div, .total_div {
+        /* flex-direction: column; */
         align-items: flex-start;
     }
 
-    .right h4,
-    .right span {
+    .right h4, .right span {
         font-size: 18px;
     }
- } 
+
+    .right {
+        opacity: 0;
+        max-height: 0;
+        overflow: hidden;
+        transition: opacity 0.3s ease, max-height 0.3s ease;
+    }
+
+    .right.visible {
+        opacity: 1;
+        max-height: 1000px; 
+    }
+}
